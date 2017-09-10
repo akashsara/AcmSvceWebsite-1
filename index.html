@@ -15,7 +15,6 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" rel="stylesheet" />
   <link href="https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/css/demo.css" rel="stylesheet prefetch" />
   <link href="css/style.css" rel="stylesheet" />
-  <link rel="stylesheet" href="css/loader.css" />
   <link href="css/indexStyle.css" rel="stylesheet" />
   <script src="http://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
   <script>
@@ -29,20 +28,6 @@
       window.onbeforeunload = function() {
         $(this).scrollTop(0);
       }
-
-    $(document).ready(function() {
-      setTimeout(function() {
-        $('body').addClass('loaded');
-      }, 3000);
-      // $('.entry-title').remove();
-    });
-
-    $(document).ready(function() {
-      setTimeout(function() {
-        $('.entry-title').remove();
-      }, 3000);
-
-    });
 
     $(document).ready(function() {
       var scrollLink = $('.scroll');
@@ -71,20 +56,6 @@
 </head>
 
 <body>
-  <header class="entry-header">
-    <h1 class="entry-title"><span style="background: -webkit-linear-gradient(#cac531,#f3f9a7);-webkit-background-clip: text;    -webkit-text-fill-color: transparent;">SVCE ACM CHAPTER</span></h1>
-  </header>
-
-  <!-- here -->
-  <!-- A blank one -->
-  <div id="loader-wrapper">
-    <div id="loader"></div>
-    <div class="loader-section section-left"></div>
-    <div class="loader-section section-right"></div>
-  </div>
-  <div id="content">
-
-
     <div class="large-header" id="large-header">
       <div class="navbar-fixed" id="homeScreen">
         <nav>
@@ -307,7 +278,6 @@
         </div>
       </div>
     </section>
-  </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
