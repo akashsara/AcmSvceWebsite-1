@@ -25,7 +25,9 @@ function writeto(){
 
     var database = firebase.database();
     var x = document.getElementById("regform");
-    firebase.database().ref('teams/' + x.elements[0].value).set({
+    var TeamName = x.elements[0].value;
+    firebase.database().ref('teams/').push({
+       [TeamName]:{ 
         Member1:{
             Name:x.elements[3].value + " " + x.elements[4].value,
             College:x.elements[5].value,
@@ -50,6 +52,7 @@ function writeto(){
             Email:x.elements[21].value,
             Phone:x.elements[22].value
         }
+    }
 
     });
     // var r=confirm("You have successfully registered as team :\n" + x.elements[0].value);
