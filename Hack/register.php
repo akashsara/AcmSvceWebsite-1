@@ -61,7 +61,7 @@
 	<div id="signup" class="container">
 		<div class="row">
 			<form id="regform" class="col s12 xl8 offset-xl2"  action="login.php" method="POST">
-				<p class="flow-text">Registration Fee: Rs. 100</p>
+				<p class="flow-text">Registration Fee: Rs. 100 for each Member</p>
 				<ul class="collapsible blue-text" data-collapsible="accordion">
 					<li>
 						<div class="collapsible-header active">Team Information*</div>
