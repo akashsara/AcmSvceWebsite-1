@@ -1,3 +1,42 @@
+$(this).scrollTop(0);
+
+$(document).ready(function(){
+	if($('#demo-canvas').css('visibility') == 'hidden' || $('#demo-canvas').css('display') == 'none'){
+		$('#demo-canvas').remove();
+	}
+	
+	var $toastContent = $('<span>New Event! <br>Hackathon! <br> <a class="red-text toast-action" href="/hacc/index.html" target="_blank">Signup</a>');
+	
+    Materialize.toast($toastContent, 3000, 'rounded');
+	
+	var scrollLink = $('.scroll');
+    scrollLink.click(function(e) {
+        e.preventDefault();
+        $('body,html').animate({
+            scrollTop: $(this.hash).offset().top
+        }, 1000);
+    });
+
+        $(window).scroll(function() {
+            var scrollbarLocation = $(this).scrollTop();
+
+            scrollLink.each(function() {
+                var sectionOffset = $(this.hash).offset().top
+
+                if (sectionOffset <= scrollbarLocation) {
+                    $(this).parent().addClass('active');
+                    $(this).parent().siblings().removeClass('active');
+                }
+            })
+        });
+		
+    $(".button-collapse").sideNav({
+            closeOnClick: true,
+            draggable: true,
+        });
+    });
+
+		
 (function() {
 
     var width, height, largeHeader, canvas, ctx, points, target, animateHeader = true;
@@ -183,10 +222,3 @@
         }
 
     })();
-
-    $(document).ready(function(){
-        $(".button-collapse").sideNav({
-            closeOnClick: true,
-            draggable: true,
-        });
-    });
